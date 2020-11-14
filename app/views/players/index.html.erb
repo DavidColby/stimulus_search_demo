@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Players</h1>
-<div>
+<div data-controller="live-search">
   <%= render partial: "shared/search_form" %>
-  <div>
+  <div data-target="live-search.results">
     <% @players.each do |player| %>
       <%= render partial: "player", locals: { player: player } %>
     <% end %>

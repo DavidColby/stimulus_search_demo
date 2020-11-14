@@ -1,2 +1,3 @@
-<h1>PlayerSearch#index</h1>
-<p>Find me in app/views/player_search/index.html.erb</p>
+<% @players.each do |player| %>
+  <%= render partial: "players/player", locals: { player: player } %>
+<% end %>
