@@ -1,0 +1,5 @@
+  <%= form_with url: player_search_index_path, method: :get do |form| %>
+    <div>
+      <%= form.text_field :search, autocomplete: "off" %>
+    </div>
+  <% end %>
