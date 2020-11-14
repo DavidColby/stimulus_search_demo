@@ -2,13 +2,17 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
   static targets = [ "results", "form" ]
+  timeout
 
   connect() {
     console.log("Connected!")
   }
 
   search() {
-    Rails.fire(this.formTarget, 'submit')
+    clearTimeout(this.timeout)
+    this.timeout = setTimeout(() => {
+      Rails.fire(this.formTarget, 'submit')
+    }, 200)
   }
 
   handleResults() {
