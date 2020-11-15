@@ -1,24 +1,11 @@
-# README
+This project contains the companion code for the Stimulus tutorial article published on [Medium](https://davidcolby.medium.com/instant-search-results-with-rails-6-and-stimulus-ffaf333926b5)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Rails project in this repo contains all you need to get started using Stimulus in Rails 6. 
 
-Things you may want to cover:
+If you want to view the demo in action:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Clone this repository
+* `bundle install`
+* `rails db:create && rails db:migrate`
+* `rails server`
+* Visit `localhost:3000` in your browser and create a project
