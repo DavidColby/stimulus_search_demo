@@ -10,4 +10,4 @@ If you want to view the demo in action:
 * `bundle install`
 * `rails db:create && rails db:migrate`
 * `rails server`
-* Visit `localhost:3000` in your browser and create a project
+* Visit `localhost:3000` in your browser and create a few players
