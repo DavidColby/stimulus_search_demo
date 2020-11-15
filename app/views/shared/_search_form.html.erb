@@ -1,4 +1,4 @@
-  <%= form_with url: player_search_index_path, method: :get, data: { action: "ajax:success->live-search#handleResults", target: "live-search.form" } do |form| %>
+  <%= form_with url: player_search_index_path, method: :get, data: { action: "ajax:beforeSend->live-search#loading ajax:success->live-search#handleResults", target: "live-search.form" } do |form| %>
     <div>
       <%= form.text_field :search, data: { action: "input->live-search#search" }, autocomplete: "off" %>
     </div>

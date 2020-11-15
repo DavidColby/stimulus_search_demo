@@ -3,9 +3,19 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = [ "results", "form" ]
   timeout
+  pendingRequest
 
   connect() {
     console.log("Connected!")
+  }
+
+  loading() {
+    this.pendingRequest = true
+    setTimeout(() => {
+      if(this.pendingRequest) {
+        this.resultsTarget.innerHTML = "<div>Searching...</div>"
+      }
+    }, 500)
   }
 
   search() {
@@ -16,6 +26,7 @@ export default class extends Controller {
   }
 
   handleResults() {
+    this.pendingRequest = false
     const [data, status, xhr] = event.detail
     this.resultsTarget.innerHTML = xhr.response
   }
